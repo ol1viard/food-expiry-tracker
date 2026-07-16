@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Documentation</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            line-height: 1.15;
+            color: black;
+            text-align: justify;
+            margin: 1in;
+        }
+        h1.front-matter {
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: justify;
+            page-break-before: always;
+            font-size: 12pt;
+            margin-bottom: 1em;
+        }
+        h1.chapter {
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            page-break-before: always;
+            font-size: 12pt;
+            margin-bottom: 1em;
+        }
+        h2.subheading {
+            font-weight: bold;
+            text-transform: capitalize;
+            text-align: justify;
+            font-size: 12pt;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        .caption {
+            font-weight: bold;
+            text-align: center;
+            margin-top: 0.5em;
+            margin-bottom: 1em;
+        }
+        .code-block {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 10pt;
+            white-space: pre-wrap;
+            text-align: left;
+            margin: 1em 0;
+            background: #f4f4f4;
+            padding: 10px;
+        }
+        .placeholder {
+            color: gray;
+            text-align: center;
+            font-style: italic;
+            margin: 1em 0;
+        }
+        /* Ensure the very first element doesn't page break if it's front-matter */
+        body > h1.front-matter:first-child {
+            page-break-before: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="front-matter">Cover Page</h1>
+    <p>[Insert Cover Page Details Here]</p>
+
+    <h1 class="front-matter">Declaration</h1>
+    <p>[Insert Declaration Content Here]</p>
+
+    <h1 class="front-matter">Dedication</h1>
+    <p>[Insert Dedication Content Here]</p>
+
+    <h1 class="front-matter">Acknowledgment</h1>
+    <p>[Insert Acknowledgment Content Here]</p>
+
+    <h1 class="front-matter">Table of Contents</h1>
+    <p>[Insert Table of Contents Here]</p>
+
+    <h1 class="front-matter">Abstract</h1>
+    <p>[Insert Abstract Content Here]</p>
+
+    <h1 class="front-matter">List of Figures</h1>
+    <p>[Insert List of Figures Here]</p>
+
+    <h1 class="front-matter">List of Tables</h1>
+    <p>[Insert List of Tables Here]</p>
+
+    <h1 class="front-matter">Definition of Key Terms</h1>
+    <p>[Insert Definition of Key Terms Here]</p>
+
+    <h1 class="front-matter">Abbreviations and Acronyms</h1>
+    <p>[Insert Abbreviations and Acronyms Here]</p>
+
+    <h1 class="chapter">CHAPTER ONE: SYSTEM OVERVIEW</h1>
+    
+    <h2 class="subheading">1.1 Research Problem</h2>
+    <p>Food waste is a growing global concern, with household spoilage being a major contributor. Often, individuals purchase groceries and forget about them until they pass their expiration dates. This leads to massive economic losses and an increased environmental footprint, as perfectly consumable food is discarded.</p>
+    
+    <h2 class="subheading">1.2 System Objectives</h2>
+    <h2 class="subheading">1.2.1 General Objective</h2>
+    <p>The general objective of this project is to develop a web-based Food Expiry Tracker application that allows users to monitor the shelf life of their groceries, receive alerts, and ultimately minimize household food waste.</p>
+    
+    <h2 class="subheading">1.2.2 Specific Objectives</h2>
+    <p>1. To provide an intuitive user interface for adding and categorizing food items.<br>
+    2. To track the expiry dates of items and flag those that are expiring soon.<br>
+    3. To offer recipe suggestions based on currently available and expiring ingredients.<br>
+    4. To provide an administrative dashboard for monitoring system usage and managing users.</p>
+
+    <h2 class="subheading">1.3 System Scope</h2>
+    <p>The system focuses on individual households and personal pantry management. It encompasses a frontend web application for user interactions and a backend SQLite database for secure data persistence.</p>
+
+    <h2 class="subheading">1.4 System Justification</h2>
+    <p>By empowering users with tools to actively track food expiration dates, this system will directly contribute to lowering food waste. This results in significant cost savings for the user and promotes more sustainable consumption patterns.</p>
+
+
+    <h1 class="chapter">CHAPTER TWO: FRONT END (USER INTERFACE) IMPLEMENTATION</h1>
+    
+    <h2 class="subheading">2.1 Home Page</h2>
+    <div class="placeholder">[Insert Screenshot of the Home Page here]</div>
+    <div class="caption">Fig 2.1-1 Home Page Interface</div>
+    <p>The Home Page UI generator code includes the following HTML structure:</p>
+    <div class="code-block">
+&lt;!-- Landing Page --&gt;
+&lt;div class="landing-page-container" id="landing-page-container"&gt;
+    &lt;header class="landing-header"&gt;
+        &lt;div class="logo"&gt;
+            &lt;i class="fa-solid fa-leaf"&gt;&lt;/i&gt; Freshr
+        &lt;/div&gt;
+        &lt;nav class="nav-links"&gt;
+            &lt;button id="btn-landing-login"&gt;Log In&lt;/button&gt;
+            &lt;button class="primary" id="btn-landing-signup"&gt;Sign Up&lt;/button&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+&lt;/div&gt;
+    </div>
+
+    <h2 class="subheading">2.2 Products Page</h2>
+    <div class="placeholder">[Insert Screenshot of the Products Page here]</div>
+    <div class="caption">Fig 2.2-1 Products Page Interface</div>
+    <p>The Products Page UI generator code includes the following HTML structure:</p>
+    <div class="code-block">
+&lt;!-- App Main Content --&gt;
+&lt;div class="app-container" id="app-container" style="display:none;"&gt;
+    &lt;main class="main-content"&gt;
+        &lt;header class="top-nav"&gt;
+            &lt;div class="search-bar"&gt;
+                &lt;i class="fa-solid fa-search"&gt;&lt;/i&gt;
+                &lt;input type="text" id="search-input" placeholder="Search your food..."&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+        &lt;div class="inventory-grid" id="inventory-grid-container"&gt;
+            &lt;!-- Dynamic Food Cards Go Here --&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+&lt;/div&gt;
+    </div>
+
+
+    <h1 class="chapter">CHAPTER THREE: BACK END (LOGIC) IMPLEMENTATION</h1>
+    
+    <h2 class="subheading">3.1 System Processes</h2>
+    <h2 class="subheading">3.1.1 Login Process</h2>
+    <p>Pseudocode for Login:</p>
+    <div class="code-block">
+BEGIN
+    RECEIVE username and password from user
+    IF username OR password is empty THEN
+        RETURN Error "Credentials required"
+    END IF
+    FETCH user_record FROM database WHERE username = username
+    IF user_record exists THEN
+        COMPARE password WITH user_record.password_hash
+        IF match THEN
+            GENERATE auth_token
+            RETURN auth_token and Success
+        ELSE
+            RETURN Error "Authentication failed"
+        END IF
+    ELSE
+        RETURN Error "Authentication failed"
+    END IF
+END
+    </div>
+    <div class="placeholder">[Insert Flowchart of Login Process here]</div>
+    <div class="caption">Fig 3.1.1-1 Login Process Flowchart</div>
+    <div class="placeholder">[Insert Screenshot of Login Code here]</div>
+    <div class="caption">Fig 3.1.1-2 Login Code snippet</div>
+    <p>Backend login implementation code:</p>
+    <div class="code-block">
+app.post('/api/auth/signin', async (req, res) => {
+    const { username, password } = req.body;
+    if (!username || !password) return res.status(400).json({ error: 'Required' });
+    try {
+        const user = await dbGet('SELECT * FROM users WHERE username = ?', [username]);
+        if (!user) return res.status(401).json({ error: 'Failed' });
+        const match = await bcrypt.compare(password, user.password);
+        if (!match) return res.status(401).json({ error: 'Failed' });
+        const token = jwt.sign({ username, role: user.role }, JWT_SECRET);
+        res.json({ token, user: { username, role: user.role } });
+    } catch (err) {
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+    </div>
+
+    <h2 class="subheading">3.1.2 Add Product Process</h2>
+    <p>Pseudocode for Adding a Product:</p>
+    <div class="code-block">
+BEGIN
+    RECEIVE product details (name, category, qty, expiryDate)
+    VERIFY user is authenticated
+    VALIDATE product details
+    IF validation fails THEN
+        RETURN Error
+    END IF
+    INSERT INTO food_items database table
+    RETURN Success message
+END
+    </div>
+    <div class="placeholder">[Insert Flowchart of Add Product Process here]</div>
+    <div class="caption">Fig 3.1.2-1 Add Product Process Flowchart</div>
+    <div class="placeholder">[Insert Screenshot of Add Product Code here]</div>
+    <div class="caption">Fig 3.1.2-2 Add Product Code snippet</div>
+
+    <h2 class="subheading">3.2 Database Implementation</h2>
+    <h2 class="subheading">3.2.1 Normalization (1nf, 2nf, 3nf)</h2>
+    <p>1NF: The raw data is organized into tables (users, food_items) where each column contains atomic values, and each record is unique via a primary key.</p>
+    <p>2NF: The tables meet 1NF and all non-key attributes are fully functionally dependent on the primary key. For example, food item details depend entirely on the food item ID.</p>
+    <p>3NF: The tables meet 2NF and contain no transitive dependencies. User roles and details are stored in the users table independently of the food items they add.</p>
+    
+    <h2 class="subheading">3.2.2 Database Technology</h2>
+    <p>SQLite was used for the database management system. It is a lightweight, zero-configuration database that is perfectly suited for applications needing a local, serverless storage solution while providing full relational database features.</p>
+
+    <h2 class="subheading">3.2.3 Database Tables</h2>
+    <div class="placeholder">[Insert Screenshot of users table here]</div>
+    <div class="caption">Table 3.2.3-1 Users Table</div>
+    <div class="placeholder">[Insert Screenshot of food_items table here]</div>
+    <div class="caption">Table 3.2.3-2 Food Items Table</div>
+    <div class="placeholder">[Insert Screenshot of history_log table here]</div>
+    <div class="caption">Table 3.2.3-3 History Log Table</div>
+    
+    <h2 class="subheading">3.2.4 System-to-database Integration</h2>
+    <p>The application communicates with the database using parameterized queries to ensure security against SQL injection.</p>
+    <div class="code-block">
+// Sign up Database Integration
+const hash = await bcrypt.hash(password, 10);
+await dbRun('INSERT INTO users (username, password, role, provider) VALUES (?, ?, ?, ?)', [username, hash, role, 'local']);
+
+// Add Food Database Integration
+await dbRun(
+    `INSERT INTO food_items (id, username, name, category, storage, qty, unit, dateAdded, dateExpiry, imageData)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    [id, req.user.username, name, category, storage, qty, unit, dateAdded, dateExpiry, imageData || null]
+);
+    </div>
+
+
+    <h1 class="chapter">CHAPTER FOUR: CONCLUSION AND RECOMMENDATIONS</h1>
+    
+    <h2 class="subheading">4.1 Conclusion</h2>
+    <p>In conclusion, this project successfully implements a comprehensive web-based platform for food expiry tracking. Users can seamlessly create accounts, log in, and manage their pantry by adding, viewing, and categorizing food products. Furthermore, the system includes an administrative dashboard that enables the shop owner or admin to monitor users and activity logs. The user interface provides clear error and success messages, along with interactive prompts, ensuring a smooth and user-friendly experience throughout.</p>
+
+    <h2 class="subheading">4.2 Recommendation</h2>
+    <p>Based on the experience of developing this project, a future developer would be advised to integrate automated data entry methods. While the current system efficiently handles manual input, integrating barcode scanning or Optical Character Recognition (OCR) for supermarket receipts could drastically reduce user friction. Technologies like the QuaggaJS library for barcodes or Tesseract.js for OCR could be easily incorporated into the frontend. Additionally, migrating from SQLite to a scalable cloud database (such as PostgreSQL on AWS) would be recommended if the application is to be deployed for a massive, multi-tenant user base.</p>
+
+</body>
+</html>

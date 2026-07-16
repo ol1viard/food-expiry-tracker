@@ -1,0 +1,29 @@
+{
+  "name": "freshr-food-expiry-tracker",
+  "version": "1.0.0",
+  "description": "Freshr – Food Expiry & Waste Tracker. A client-side app to track food expiration dates, reduce waste, and get smart recipe suggestions.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "food",
+    "expiry",
+    "tracker",
+    "waste",
+    "kitchen"
+  ],
+  "author": "Freshr Team",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "serve": "^14.2.3"
+  }
+}
