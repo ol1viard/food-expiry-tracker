@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshGuard | Food Expiry &amp; Waste Tracker</title>
+    <meta name="description" content="FreshGuard helps you track food expiration dates, reduce household food waste, and suggest recipes using soon-to-expire ingredients.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- =====================================================================
+         AUTH OVERLAY — shown until user is signed in
+    ====================================================================== -->
+    <!-- =====================================================================
+         PUBLIC LANDING PAGE — shown by default to public visitors
+    ====================================================================== -->
+    <div class="landing-page-container" id="landing-page-container">
+        <!-- Landing Header / Navbar -->
+        <header class="landing-header">
+            <div class="landing-logo">
+                <div class="landing-logo-icon">
+                    <i class="fa-solid fa-square-poll-horizontal"></i>
+                </div>
+                <span>FreshGuard</span>
+            </div>
+            <nav class="landing-nav">
+                <a href="#landing-home" class="landing-nav-link active">Home</a>
+                <a href="#landing-services" class="landing-nav-link">Services</a>
+                <a href="#landing-about" class="landing-nav-link">About Us</a>
+            </nav>
+            <div class="landing-actions">
+                <button class="landing-btn landing-btn-text" id="landing-btn-login">Log In</button>
+                <button class="landing-btn landing-btn-primary" id="landing-btn-signup">Get Started</button>
+            </div>
+            <button class="landing-menu-mobile-btn" id="btn-landing-mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </header>
+
+        <!-- Mobile Nav Menu -->
+        <div class="landing-mobile-nav" id="landing-mobile-nav" style="display: none;">
+            <a href="#landing-home" class="landing-mobile-link">Home</a>
+            <a href="#landing-services" class="landing-mobile-link">Services</a>
+            <a href="#landing-about" class="landing-mobile-link">About Us</a>
+            <div class="landing-mobile-actions">
+                <button class="landing-btn landing-btn-text full-width" id="landing-mobile-btn-login">Log In</button>
+                <button class="landing-btn landing-btn-primary full-width" id="landing-mobile-btn-signup">Get Started</button>
+            </div>
+        </div>
+
+        <!-- Section: Home (Hero) -->
+        <section id="landing-home" class="landing-hero-section">
+            <div class="landing-hero-content">
+                <span class="landing-hero-badge"><i class="fa-solid fa-leaf"></i> SMART PANTRY MANAGER</span>
+                <h1>Track Expiry.<br>Reduce Food Waste.</h1>
+                <p>FreshGuard helps you monitor expiration dates, suggest intelligent recipes using ingredients you already have, and slash your household food waste. Join thousands of eco-conscious home chefs today!</p>
+                <div class="landing-hero-buttons">
+                    <button class="landing-btn landing-btn-primary landing-btn-lg" id="hero-btn-start">Start Free Trial</button>
+                    <a href="#landing-services" class="landing-btn landing-btn-secondary landing-btn-lg">Explore Features</a>
+                </div>
+                <div class="landing-hero-stats">
+                    <div class="landing-stat-item">
+                        <h3>30%</h3>
+                        <p>Average Waste Reduction</p>
+                    </div>
+                    <div class="landing-divider-line"></div>
+                    <div class="landing-stat-item">
+                        <h3>$1,200</h3>
+                        <p>Annual Savings per Family</p>
+                    </div>
+                    <div class="landing-divider-line"></div>
+                    <div class="landing-stat-item">
+                        <h3>10k+</h3>
+                        <p>Active Green Kitchens</p>
+                    </div>
+                </div>
+            </div>
+            <div class="landing-hero-visual">
+                <div class="visual-card-floating">
+                    <div class="visual-avatar-row">
+                        <img src="images/bg-fruits.jpg" alt="Fruits">
+                        <img src="images/bg-veg.jpg" alt="Vegetables">
+                        <img src="images/bg-dairy.jpg" alt="Dairy">
+                    </div>
+                    <div class="visual-card-text">
+                        <h4>Organic Strawberry</h4>
+                        <span class="badge badge-produce">Expiring in 2 days</span>
+                    </div>
+                </div>
+                <!-- Premium visual element with radial gradient and backdrop blur -->
+                <div class="visual-glow-sphere"></div>
+            </div>
+        </section>
+
+        <!-- Section: Services -->
+        <section id="landing-services" class="landing-services-section">
+            <div class="landing-section-header">
+                <span class="section-tag">SERVICES &amp; FEATURES</span>
+                <h2>Revolutionize Your Kitchen Management</h2>
+                <p>Everything you need to run a modern, efficient, and zero-waste household pantry.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-bell"></i></div>
+                    <h3>Smart Expiry Tracking</h3>
+                    <p>Get notified before your food goes bad. Dynamic color-coded status badges keep you informed at a glance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-kitchen-set"></i></div>
+                    <h3>Zero-Waste Recipes</h3>
+                    <p>Enter soon-to-expire ingredients and let our engine recommend delicious, creative recipes to save them.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Waste Analytics</h3>
+                    <p>Track your food handling history. Beautiful charts display your Eco Efficiency Performance over time.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>Multi-User Kitchens</h3>
+                    <p>Collaborate with household members. Dedicated admin panel to manage permissions and roles seamlessly.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="landing-about" class="landing-about-section">
+            <div class="about-container-split">
+                <div class="about-visual">
+                    <div class="about-img-collage">
+                        <div class="collage-item c-1" style="background-image: url('images/bg-veg.jpg');"></div>
+                        <div class="collage-item c-2" style="background-image: url('images/bg-fruits.jpg');"></div>
+                    </div>
+                </div>
+                <div class="about-text-content">
+                    <span class="section-tag">OUR MISSION</span>
+                    <h2>Fighting Food Waste, One Kitchen at a Time</h2>
+                    <p>Did you know that nearly one-third of all food produced globally goes to waste? Most of it happens right inside household kitchens. FreshGuard was born out of a desire to make sustainability simple, interactive, and rewarding.</p>
+                    <p>Our mission is to help households save money, cook healthier, and reduce their carbon footprint by ensuring that no good ingredient gets left behind. We believe in practical, technology-driven conservation that fits your daily routine.</p>
+                    <button class="landing-btn landing-btn-primary" id="about-btn-join">Join the Movement</button>
+
+                    <!-- Contact Info -->
+                    <div class="about-contact-card">
+                        <div class="about-contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="about-contact-text">
+                            <span class="about-contact-label">Contact Us</span>
+                            <a href="tel:0116234767" class="about-contact-number">0116234767</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Landing Footer -->
+        <footer class="landing-footer">
+            <p>&copy; 2026 FreshGuard. Made with <i class="fa-solid fa-heart" style="color: var(--color-danger);"></i> for a greener planet.</p>
+        </footer>
+    </div>
+
+    <!-- =====================================================================
+         AUTH OVERLAY — redesigned glassmorphism with diagonal scrolling bg
+    ====================================================================== -->
+    <div class="auth-overlay" id="auth-overlay" style="display:none;">
+        
+        <!-- Diagonally moving background grid -->
+        <div class="diagonal-bg-container">
+            <div class="diagonal-bg-track">
+                <div class="bg-slide" style="background-image: url('images/bg-fruits.jpg');"></div>
+                <div class="bg-slide" style="background-image: url('images/bg-veg.jpg');"></div>
+                <div class="bg-slide" style="background-image: url('images/bg-dairy.jpg');"></div>
+                <!-- Duplicate for seamless loop -->
+                <div class="bg-slide" style="background-image: url('images/bg-fruits.jpg');"></div>
+                <div class="bg-slide" style="background-image: url('images/bg-veg.jpg');"></div>
+                <div class="bg-slide" style="background-image: url('images/bg-dairy.jpg');"></div>
+            </div>
+        </div>
+        
+        <div class="auth-overlay-dim"></div>
+
+        <!-- Glassmorphism Auth Card -->
+        <div class="auth-phone-card">
+            <!-- Close / Back Button -->
+            <button class="auth-close-btn" id="btn-auth-back-landing" type="button" title="Back to home">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- App Header -->
+            <div class="auth-app-header">
+                <h2 class="auth-app-title" id="auth-title-display">Login</h2>
+                <p class="auth-app-tagline" id="auth-tagline-display">Welcome back please login to your account</p>
+            </div>
+
+            <!-- Tab Navigation (Hidden but preserved in DOM for JS compatibility) -->
+            <div class="auth-tabs" style="display: none;">
+                <button class="auth-tab-btn active" id="tab-btn-signin">SIGN IN</button>
+                <button class="auth-tab-btn" id="tab-btn-signup">CREATE ACCOUNT</button>
+            </div>
+
+            <!-- Sign In Form -->
+            <div id="auth-signin-view">
+                <form id="signin-form">
+                    <div class="auth-form-group">
+                        <div class="auth-input-container">
+                            <input type="text" id="signin-username" class="auth-input" placeholder="User Name" required autocomplete="username">
+                            <i class="fa-regular fa-user auth-input-icon"></i>
+                        </div>
+                    </div>
+                    <div class="auth-form-group">
+                        <div class="auth-input-container">
+                            <input type="password" id="signin-password" class="auth-input" placeholder="Password" required>
+                            <i class="fa-regular fa-eye-slash auth-input-icon toggle-password-visibility" data-target="signin-password"></i>
+                        </div>
+                        <div class="auth-label-row-compact">
+                            <a href="#" class="auth-forgot-link" id="link-forgot-password">Forgot password?</a>
+                        </div>
+                    </div>
+                    
+                    <div class="auth-remember-row">
+                        <label class="auth-checkbox-label">
+                            <input type="checkbox" id="signin-remember" checked>
+                            <span class="custom-checkbox"><i class="fa-solid fa-check"></i></span>
+                            <span class="checkbox-text">Remember me</span>
+                        </label>
+                    </div>
+
+                    <div id="signin-error" class="form-error" style="display:none;"></div>
+                    <button type="submit" class="auth-submit-btn" id="btn-secure-login">Login</button>
+                    
+                    <div class="auth-switch-text">
+                        Don't have an account? <a href="#" id="link-go-to-signup">Signup</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="auth-signup-view" style="display:none;">
+                <form id="signup-form">
+                    <div class="auth-form-group">
+                        <div class="auth-input-container">
+                            <input type="text" id="signup-username" class="auth-input" placeholder="User Name" required autocomplete="off">
+                            <i class="fa-regular fa-user auth-input-icon"></i>
+                        </div>
+                    </div>
+                    <div class="auth-form-group">
+                        <div class="auth-input-container">
+                            <input type="password" id="signup-password" class="auth-input" placeholder="Password" required>
+                            <i class="fa-regular fa-eye-slash auth-input-icon toggle-password-visibility" data-target="signup-password"></i>
+                        </div>
+                    </div>
+                    <div class="auth-form-group">
+                        <div class="auth-input-container select-container">
+                            <select id="signup-role" class="auth-input auth-select">
+                                <option value="user">Regular User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                            <i class="fa-solid fa-user-shield auth-input-icon"></i>
+                        </div>
+                    </div>
+                    <div id="signup-error" class="form-error" style="display:none;"></div>
+                    <button type="submit" class="auth-submit-btn" id="btn-create-account">Create Account</button>
+                    
+                    <div class="auth-switch-text">
+                        Already have an account? <a href="#" id="link-go-to-signin">Login</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Social Auth -->
+            <div class="auth-divider">
+                <span>OR CONTINUE WITH</span>
+            </div>
+
+            <div class="auth-social-btns">
+                <button class="auth-social-btn auth-google-btn" type="button" id="btn-google-auth">
+                    <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                    Google
+                </button>
+            </div>
+
+            <!-- Google Modal -->
+            <div id="google-modal-overlay" class="google-modal-overlay" style="display:none;">
+                <div class="google-modal-card">
+                    <div class="google-modal-header">
+                        <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                        </svg>
+                        <span>Sign in with Google</span>
+                        <button class="google-modal-close" id="btn-google-modal-close" type="button">&times;</button>
+                    </div>
+                    <p class="google-modal-desc">Enter your Google email address. If no account exists, one will be created for you automatically.</p>
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="google-email-input">GOOGLE EMAIL</label>
+                        <input type="email" id="google-email-input" class="auth-input" placeholder="you@gmail.com" autocomplete="email">
+                    </div>
+                    <div class="auth-form-group">
+                        <label class="auth-label" for="google-role-select">ACCOUNT ROLE</label>
+                        <select id="google-role-select" class="auth-input auth-select">
+                            <option value="user">Regular User</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <div id="google-modal-error" class="form-error" style="display:none;"></div>
+                    <button class="auth-submit-btn" type="button" id="btn-google-confirm">SIGN IN WITH GOOGLE</button>
+                </div>
+            </div>
+
+            <!-- Forgot Password Modal -->
+            <div id="forgot-modal-overlay" class="google-modal-overlay" style="display:none;">
+                <div class="google-modal-card">
+                    <div class="google-modal-header">
+                        <i class="fa-solid fa-key" style="color:#FBBC05; font-size:1.1rem; margin-right:0.5rem;"></i>
+                        <span style="font-weight:700;">Reset Password Request</span>
+                        <button class="google-modal-close" id="btn-forgot-modal-close" type="button">&times;</button>
+                    </div>
+                    <p class="google-modal-desc">Enter your username. We will generate a message prompt you can copy and send to your administrator so they can send you a password reset link.</p>
+                    <div class="auth-form-group" id="forgot-input-container">
+                        <label class="auth-label" for="forgot-username-input">USERNAME</label>
+                        <input type="text" id="forgot-username-input" class="auth-input" placeholder="Enter your username" autocomplete="username">
+                    </div>
+                    <div id="forgot-modal-error" class="form-error" style="display:none;"></div>
+                    
+                    <button class="auth-submit-btn" type="button" id="btn-forgot-generate">GENERATE REQUEST</button>
+                    
+                    <div id="forgot-prompt-container" style="display:none; margin-top: 1rem; text-align: left;">
+                        <label class="auth-label">COPY &amp; SEND THIS PROMPT TO ADMIN</label>
+                        <textarea id="forgot-prompt-text" class="auth-input" style="height: 100px; font-family: monospace; font-size: 0.8rem; resize: none; margin-bottom: 0.85rem;" readonly></textarea>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button class="btn btn-primary btn-sm" id="btn-forgot-copy" style="flex: 1; justify-content: center; font-size: 0.75rem;" type="button">
+                                <i class="fa-solid fa-copy"></i> Copy Message
+                            </button>
+                            <button class="btn btn-secondary btn-sm" id="btn-forgot-email" style="flex: 1; justify-content: center; font-size: 0.75rem;" type="button">
+                                <i class="fa-solid fa-envelope"></i> Email Admin
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reset Password Modal -->
+            <div id="reset-modal-overlay" class="google-modal-overlay" style="display:none;">
+                <div class="google-modal-card">
+                    <div class="google-modal-header">
+                        <i class="fa-solid fa-lock" style="color:var(--color-primary); font-size:1.1rem; margin-right: 0.5rem;"></i>
+                        <span style="font-weight:700;">Set New Password</span>
+                        <button class="google-modal-close" id="btn-reset-modal-close" type="button">&times;</button>
+                    </div>
+                    <p class="google-modal-desc">Please choose a new secure password for your account, <strong id="reset-modal-username-display">user</strong>.</p>
+                    <form id="reset-password-form">
+                        <div class="auth-form-group">
+                            <label class="auth-label" for="reset-new-password">NEW PASSWORD</label>
+                            <input type="password" id="reset-new-password" class="auth-input" placeholder="••••••••" required>
+                        </div>
+                        <div class="auth-form-group">
+                            <label class="auth-label" for="reset-confirm-password">CONFIRM PASSWORD</label>
+                            <input type="password" id="reset-confirm-password" class="auth-input" placeholder="••••••••" required>
+                        </div>
+                        <div id="reset-modal-error" class="form-error" style="display:none;"></div>
+                        <button class="auth-submit-btn" type="submit" id="btn-reset-submit">RESET PASSWORD</button>
+                    </form>
+                </div>
+            </div>
+
+            <p class="auth-terms">
+                By proceeding, you agree to FreshGuard's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+            </p>
+            <div class="auth-card-footer">
+                Created by <span>anggidwiiputra</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         MAIN APPLICATION CONTAINER
+    ====================================================================== -->
+    <div class="app-container" id="app-container" style="display:none;">
+
+        <!-- Sidebar Navigation (Desktop) -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-square-poll-horizontal"></i>
+                </div>
+                <h2>FreshGuard</h2>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#" class="nav-item active" data-tab="dashboard" id="nav-dashboard">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="recipes" id="nav-recipes">
+                    <i class="fa-solid fa-kitchen-set"></i>
+                    <span>Smart Recipes</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="add" id="nav-add">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <span>Snap &amp; Track</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="inventory" id="nav-inventory">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Pantry Grid</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="history" id="nav-history">
+                    <i class="fa-solid fa-bell"></i>
+                    <span>Waste Log</span>
+                </a>
+                <!-- Admin only -->
+                <a href="#" class="nav-item nav-admin-only" data-tab="admin" id="nav-admin" style="display:none;">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Admin Panel</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar" id="sidebar-avatar">
+                        <img src="images/profile.png" alt="Avatar" class="sidebar-avatar-img" id="sidebar-avatar-img" onerror="this.style.display='none'">
+                        <i class="fa-solid fa-user" id="sidebar-avatar-fallback"></i>
+                    </div>
+                    <div class="user-info">
+                        <h4 id="sidebar-username">My Kitchen</h4>
+                        <span id="sidebar-role">User</span>
+                    </div>
+                </div>
+                <div class="sidebar-actions">
+                    <button class="btn btn-secondary btn-sm" id="btn-sidebar-theme-toggle" title="Toggle Theme">
+                        <i class="fa-solid fa-moon"></i> Theme
+                    </button>
+                    <button class="btn btn-secondary btn-sm" id="btn-logout">
+                        <i class="fa-solid fa-right-from-bracket"></i> Log Out
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Wrapper -->
+        <main class="main-content">
+
+            <!-- Mobile Top Bar Header -->
+            <header class="mobile-top-bar">
+                <button class="mobile-menu-btn" id="btn-mobile-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="mobile-logo">
+                    <span>FreshGuard</span>
+                </div>
+                <div class="header-right-actions">
+                    <button class="theme-toggle-btn" id="btn-theme-toggle" title="Toggle theme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <div class="header-avatar-container">
+                        <img src="images/profile.png" alt="Profile" class="header-avatar" id="header-avatar-img" onerror="this.style.display='none'; document.getElementById('header-avatar-fallback').style.display='block'">
+                        <i class="fa-solid fa-user" id="header-avatar-fallback" style="display:none;"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Title Header (Desktop) -->
+            <header class="top-header">
+                <div class="welcome-text">
+                    <h1 id="page-title">Healthy Feed</h1>
+                    <p id="current-date-display"></p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary" id="btn-add-food-trigger">
+                        <i class="fa-solid fa-plus"></i> Add Item
+                    </button>
+                </div>
+            </header>
+
+            <!-- ── HOME / DASHBOARD TAB ────────────────────────────────────── -->
+            <section id="tab-dashboard" class="tab-content active-tab">
+                <div class="home-feed-layout">
+                    <!-- Title/Header block visible on mobile inside feed -->
+                    <div class="mobile-feed-header">
+                        <h2>Healthy Feed</h2>
+                        <p>Keep track of your nutrients and minimize food waste today.</p>
+                    </div>
+
+                    <!-- Dark Action Banner: Expiring Soon -->
+                    <div class="action-banner">
+                        <div class="action-banner-content">
+                            <span class="action-badge">ACTION REQUIRED</span>
+                            <h2>Expiring Soon</h2>
+                            <p><span id="dashboard-expiring-count">0</span> items need your attention before 24h.</p>
+                            <div class="expiring-avatars-row" id="dashboard-expiring-avatars">
+                                <!-- Populated dynamically (Spinach, Strawberries, +1, etc.) -->
+                            </div>
+                        </div>
+                        <div class="action-banner-watermark" id="dashboard-expiring-watermark">0</div>
+                    </div>
+
+                    <!-- Categories Scroll Section -->
+                    <div class="dashboard-section">
+                        <div class="section-header-row">
+                            <h3>Categories</h3>
+                            <a href="#" class="view-all-link" id="link-view-all-categories">View All</a>
+                        </div>
+                        <div class="scroll-wrapper">
+                            <button class="scroll-arrow scroll-arrow-left" id="cat-scroll-left" aria-label="Scroll left">&#8249;</button>
+                            <div class="horizontal-scroll categories-scroll" id="dashboard-categories-list">
+                                <!-- Populated dynamically with category pills -->
+                            </div>
+                            <button class="scroll-arrow scroll-arrow-right" id="cat-scroll-right" aria-label="Scroll right">&#8250;</button>
+                        </div>
+                    </div>
+
+
+                    <!-- Feed Today suggestions vertical list -->
+                    <div class="dashboard-section">
+                        <div class="section-header-row">
+                            <h3>Feed Today</h3>
+                            <button class="feed-filter-btn" id="btn-feed-filter">
+                                <i class="fa-solid fa-sliders"></i>
+                            </button>
+                        </div>
+                        <div class="feed-today-list" id="dashboard-feed-list">
+                            <!-- Populated dynamically (Avocado Smash, Pomegranate Bowl, Grilled Salmon cards) -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hidden analytics metrics preserved for background code state compatibility -->
+                <div style="display:none;">
+                    <span id="metric-total">0</span>
+                    <span id="metric-warning">0</span>
+                    <span id="metric-expired">0</span>
+                    <span id="metric-efficiency">100%</span>
+                    <span id="efficiency-percent">100%</span>
+                    <span id="storage-val-fridge">0</span>
+                    <span id="storage-val-freezer">0</span>
+                    <span id="storage-val-pantry">0</span>
+                    <svg><circle id="waste-progress-bar"></circle></svg>
+                    <div id="priority-alert-list"></div>
+                </div>
+            </section>
+
+            <!-- ── INVENTORY / PANTRY TAB ──────────────────────────────────── -->
+            <section id="tab-inventory" class="tab-content">
+                <div class="inventory-view-layout">
+                    
+                    <!-- Search Bar exactly matching mockup -->
+                    <div class="inventory-search-container">
+                        <div class="search-bar-wrapper">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="inventory-search" placeholder="Search your pantry...">
+                        </div>
+                    </div>
+
+                    <!-- Filter chips scroll -->
+                    <div class="horizontal-scroll filter-chips" id="storage-filter-tabs">
+                        <button class="filter-chip active" data-filter="all">All Items</button>
+                        <button class="filter-chip" data-filter="fridge">Fridge</button>
+                        <button class="filter-chip" data-filter="freezer">Freezer</button>
+                        <button class="filter-chip" data-filter="pantry">Pantry</button>
+                    </div>
+
+                    <!-- Secondary filter settings (preserved for logic compatibility) -->
+                    <div class="select-filters" style="display:none;">
+                        <select id="category-filter-select">
+                            <option value="all" selected>All Categories</option>
+                            <option value="dairy">Dairy</option>
+                            <option value="meat">Meat &amp; Seafood</option>
+                            <option value="produce">Fruits &amp; Veggies</option>
+                            <option value="bakery">Bakery</option>
+                            <option value="pantry">Pantry Staples</option>
+                            <option value="beverages">Beverages</option>
+                            <option value="leftovers">Leftovers</option>
+                        </select>
+                        <select id="sort-select">
+                            <option value="expiry-soon" selected>Expiring Soonest</option>
+                            <option value="expiry-late">Expiring Latest</option>
+                            <option value="added-recent">Recently Added</option>
+                            <option value="alphabetical">Name A-Z</option>
+                        </select>
+                    </div>
+
+                    <!-- Two-column grid of inventory cards -->
+                    <div class="inventory-grid" id="inventory-grid-container"></div>
+                </div>
+
+                <!-- Desktop Table View (styled nicely, accessible under desktop layout if preferred, or hidden) -->
+                <div class="content-card full-width-inventory" style="display:none;">
+                    <div class="panel-header">
+                        <h3>All Kitchen Items</h3>
+                        <button class="btn btn-primary" id="btn-add-food-list-trigger">
+                            <i class="fa-solid fa-plus"></i> Add New Item
+                        </button>
+                    </div>
+                    <div class="table-container">
+                        <table class="inventory-table">
+                            <thead>
+                                <tr>
+                                    <th>Food Item</th>
+                                    <th>Category</th>
+                                    <th>Storage</th>
+                                    <th>Quantity</th>
+                                    <th>Expiry Date</th>
+                                    <th>Days Left</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="inventory-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── ADD ITEM / SNAP & TRACK TAB (NEW) ───────────────────────── -->
+            <section id="tab-add" class="tab-content">
+                <div class="snap-track-container">
+                    <div class="snap-track-header">
+                        <h2>Snap &amp; Track</h2>
+                        <p>Keep your fridge fresh by adding your latest culinary finds.</p>
+                    </div>
+                    
+                    <!-- Camera scanner container mockup -->
+                    <div class="camera-scan-card" id="btn-camera-scan">
+                        <div class="scan-bg-overlay"></div>
+                        <div class="scan-frame">
+                            <div class="scan-corner top-left"></div>
+                            <div class="scan-corner top-right"></div>
+                            <div class="scan-corner bottom-left"></div>
+                            <div class="scan-corner bottom-right"></div>
+                            
+                            <div class="scan-camera-btn">
+                                <i class="fa-solid fa-camera"></i>
+                            </div>
+                            <h3>Scan Fresh Item</h3>
+                            <p>Tap to capture or upload from gallery</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item entry form -->
+                    <div class="track-form-card">
+                        <form id="track-item-form">
+                            <div class="form-group-floating">
+                                <label class="floating-label">ITEM NAME</label>
+                                <div class="input-with-icon">
+                                    <input type="text" id="track-name" placeholder="e.g. Organic Avocado" required autocomplete="off">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row-split">
+                                <div class="form-group-floating">
+                                    <label class="floating-label">EXPIRY DATE</label>
+                                    <input type="date" id="track-expiry" required>
+                                </div>
+                                <div class="form-group-floating">
+                                    <label class="floating-label">CATEGORY</label>
+                                    <div class="select-with-arrow">
+                                        <select id="track-category">
+                                            <option value="produce" selected>Produce</option>
+                                            <option value="dairy">Dairy</option>
+                                            <option value="meat">Meat &amp; Seafood</option>
+                                            <option value="bakery">Bakery</option>
+                                            <option value="pantry">Pantry Staples</option>
+                                            <option value="beverages">Beverages</option>
+                                            <option value="leftovers">Leftovers</option>
+                                        </select>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo Upload -->
+                            <div class="photo-upload-group">
+                                <label class="floating-label">ITEM PHOTO (OPTIONAL)</label>
+                                <label for="track-photo-input" class="photo-upload-zone" id="track-photo-zone">
+                                    <div class="photo-upload-placeholder" id="track-photo-placeholder">
+                                        <i class="fa-solid fa-image"></i>
+                                        <span>Tap to add a photo</span>
+                                    </div>
+                                    <img id="track-photo-preview" class="photo-upload-preview" style="display:none;" alt="Preview">
+                                    <input type="file" id="track-photo-input" accept="image/*" capture="environment" style="display:none;">
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn-track-submit">
+                                <span>Track Item</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Frequent Additions list -->
+                    <div class="frequent-additions-section">
+                        <h3>Frequent Additions</h3>
+                        <div class="horizontal-scroll frequent-pills" id="frequent-pills-list">
+                            <!-- Populated dynamically (Whole Milk, Fresh Carrots pills) -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── SMART RECIPES TAB ─────────────────────────────────── -->
+            <section id="tab-recipes" class="tab-content">
+                <div class="recipes-layout">
+                    <div class="recipes-sidebar">
+                        <div class="content-card recipe-ingredients-card">
+                            <h3>Expiring Ingredients</h3>
+                            <p class="section-desc">Recipes based on items expiring in 7 days.</p>
+                            <div class="ingredients-list" id="recipe-ingredients-checklist"></div>
+                            <button class="btn btn-primary full-width" id="btn-find-recipes">
+                                <i class="fa-solid fa-kitchen-set"></i> Find Recipes
+                            </button>
+                        </div>
+                    </div>
+                    <div class="recipes-main">
+                        <div class="content-card recipes-card">
+                            <div class="recipes-header">
+                                <h3>Suggested Waste-Less Meals</h3>
+                                <span class="badge badge-info" id="recipe-matches-count">0 suggestions</span>
+                            </div>
+                            <div class="recipes-grid" id="recipes-grid-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── WASTE LOG TAB ─────────────────────────────────────── -->
+            <section id="tab-history" class="tab-content">
+                <div class="history-grid-layout">
+                    <div class="content-card history-stats-card">
+                        <h3>Waste vs. Consumption Analytics</h3>
+                        <p class="section-desc">Track and visualise your green habits over time.</p>
+                        <div class="analytics-metrics">
+                            <div class="stats-row">
+                                <div class="col">
+                                    <h5 class="label">Total Managed</h5>
+                                    <h2 id="history-total-managed">0</h2>
+                                </div>
+                                <div class="col">
+                                    <h5 class="label">Consumed</h5>
+                                    <h2 class="text-success" id="history-total-consumed">0</h2>
+                                </div>
+                                <div class="col">
+                                    <h5 class="label">Wasted</h5>
+                                    <h2 class="text-danger" id="history-total-wasted">0</h2>
+                                </div>
+                            </div>
+                            <hr class="card-divider">
+                            <div class="waste-trend-bar">
+                                <div class="bar-header">
+                                    <span>Eco Efficiency Performance</span>
+                                    <span id="efficiency-performance-text">100%</span>
+                                </div>
+                                <div class="progress-bar-linear">
+                                    <div class="progress-fill bg-gradient-success" id="linear-consumed-fill" style="width:100%;"></div>
+                                </div>
+                                <p class="help-text">Higher % = more food eaten, less thrown away!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card logs-card">
+                        <div class="panel-header">
+                            <h3>Consumption History Log</h3>
+                            <button class="btn btn-secondary btn-sm" id="btn-clear-history">
+                                <i class="fa-solid fa-trash-can"></i> Clear Log
+                            </button>
+                        </div>
+                        <div class="table-container">
+                            <table class="history-table">
+                                <thead>
+                                    <tr>
+                                        <th>Food Item</th>
+                                        <th>Category</th>
+                                        <th>Storage</th>
+                                        <th>Quantity</th>
+                                        <th>Resolution</th>
+                                        <th>Date Handled</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="history-table-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── ADMIN PANEL TAB ───────────────────────────────────── -->
+            <section id="tab-admin" class="tab-content">
+                <div class="admin-grid-layout">
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-icon bg-blue-trans"><i class="fa-solid fa-users"></i></div>
+                            <div class="metric-details">
+                                <h3>Registered Users</h3>
+                                <span id="admin-metric-users">0</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon bg-success-trans"><i class="fa-solid fa-boxes-stacked"></i></div>
+                            <div class="metric-details">
+                                <h3>Global Items</h3>
+                                <span id="admin-metric-items">0</span>
+                            </div>
+                        </div>
+                        <div class="metric-card alert-soon">
+                            <div class="metric-icon bg-warning-trans"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                            <div class="metric-details">
+                                <h3>Global Expiring</h3>
+                                <span id="admin-metric-warning">0</span>
+                            </div>
+                        </div>
+                        <div class="metric-card alert-expired">
+                            <div class="metric-icon bg-danger-trans"><i class="fa-solid fa-circle-xmark"></i></div>
+                            <div class="metric-details">
+                                <h3>Global Expired</h3>
+                                <span id="admin-metric-expired">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pending Admin Requests -->
+                    <div class="content-card admin-requests-card" id="admin-requests-section">
+                        <div class="panel-header">
+                            <h3><i class="fa-solid fa-user-shield" style="color:var(--color-primary); margin-right:0.5rem;"></i>Pending Admin Requests</h3>
+                            <span class="badge badge-warning" id="admin-requests-count" style="display:none;">0</span>
+                        </div>
+                        <p class="section-desc">Users who have requested admin access. Share their verification code with them via phone or message, then approve once they confirm.</p>
+                        <div id="admin-pending-requests-list">
+                            <div class="empty-state-sm"><i class="fa-solid fa-check-circle"></i> No pending requests.</div>
+                        </div>
+                    </div>
+
+                    <!-- Failed Login Alerts -->
+                    <div class="content-card admin-failed-login-card" id="admin-failed-logins-section">
+                        <div class="panel-header">
+                            <h3><i class="fa-solid fa-triangle-exclamation" style="color:#f59e0b; margin-right:0.5rem;"></i>Login Alert Notifications</h3>
+                            <span class="badge badge-danger" id="admin-failed-logins-count" style="display:none;">0</span>
+                        </div>
+                        <p class="section-desc">Users who have had 3+ failed login attempts. Generate a password reset link and send it to them so they can regain access.</p>
+                        <div id="admin-failed-logins-list">
+                            <div class="empty-state-sm"><i class="fa-solid fa-shield-check"></i> No login alerts at this time.</div>
+                        </div>
+                    </div>
+
+                    <div class="admin-actions-split">
+                        <div class="content-card">
+                            <h3>Registered Accounts</h3>
+                            <div class="table-container">
+                                <table class="admin-users-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Username</th>
+                                            <th>Role</th>
+                                            <th>Active Items</th>
+                                            <th>Log Entries</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="admin-users-table-body"></tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="content-card create-user-card">
+                            <h3>Create Account</h3>
+                            <form id="admin-create-user-form">
+                                <div class="form-group">
+                                    <label for="admin-new-username">Username <span class="required">*</span></label>
+                                    <input type="text" id="admin-new-username" placeholder="New username" required autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                    <label for="admin-new-password">Password <span class="required">*</span></label>
+                                    <input type="password" id="admin-new-password" placeholder="New password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="admin-new-role">Role</label>
+                                    <select id="admin-new-role">
+                                        <option value="user">Regular User</option>
+                                        <option value="admin">Admin</option>
+                                    </select>
+                                </div>
+                                <div id="admin-create-error" class="form-error" style="display:none;"></div>
+                                <button type="submit" class="btn btn-primary full-width">
+                                    <i class="fa-solid fa-user-plus"></i> Create Account
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- =====================================================================
+         MODALS & FLOATING ACTIONS
+    ====================================================================== -->
+
+    <!-- Mobile Floating Action Button (FAB) -->
+    <button class="mobile-fab" id="btn-mobile-fab" title="Add Item">
+        <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <!-- Bottom Navigation Bar (Mobile only) -->
+    <nav class="bottom-nav" id="bottom-nav">
+        <a href="#" class="bottom-nav-item active" data-tab="dashboard" id="btn-bottom-home">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="bottom-nav-item" data-tab="recipes" id="btn-bottom-recipes">
+            <i class="fa-solid fa-kitchen-set"></i>
+            <span>Recipes</span>
+        </a>
+        <a href="#" class="bottom-nav-item center-plus" data-tab="add" id="btn-bottom-add">
+            <div class="plus-circle">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </a>
+        <a href="#" class="bottom-nav-item" data-tab="inventory" id="btn-bottom-inventory">
+            <i class="fa-solid fa-box-archive"></i>
+            <span>Pantry</span>
+        </a>
+        <a href="#" class="bottom-nav-item" data-tab="history" id="btn-bottom-history">
+            <div class="bell-wrapper">
+                <i class="fa-solid fa-bell"></i>
+                <span class="bell-dot"></span>
+            </div>
+            <span>Activity</span>
+        </a>
+    </nav>
+
+    <!-- Modal: Add / Edit Food Item (Fallback/Desktop Modal) -->
+    <div class="modal" id="modal-food-form">
+        <div class="modal-overlay" id="form-modal-overlay"></div>
+        <div class="modal-content">
+            <header class="modal-header">
+                <h3 id="modal-title">Add Food Item</h3>
+                <button class="close-btn" id="btn-close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </header>
+            <form id="food-item-form">
+                <input type="hidden" id="edit-item-id">
+                <div class="form-group">
+                    <label for="food-name">Food Name <span class="required">*</span></label>
+                    <input type="text" id="food-name" placeholder="e.g. Organic Strawberries, Whole Milk" required autocomplete="off">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="food-category">Category</label>
+                        <select id="food-category">
+                            <option value="produce">Fruits &amp; Veggies</option>
+                            <option value="dairy">Dairy</option>
+                            <option value="meat">Meat &amp; Seafood</option>
+                            <option value="bakery">Bakery</option>
+                            <option value="pantry">Pantry Staples</option>
+                            <option value="beverages">Beverages</option>
+                            <option value="leftovers">Leftovers</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="food-storage">Storage Location</label>
+                        <select id="food-storage">
+                            <option value="fridge">Fridge</option>
+                            <option value="freezer">Freezer</option>
+                            <option value="pantry">Pantry</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="food-qty">Quantity</label>
+                        <input type="number" id="food-qty" value="1" min="0.1" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="food-unit">Unit</label>
+                        <input type="text" id="food-unit" placeholder="pcs, g, ml…" value="pcs" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="food-expiry">Expiration Date <span class="required">*</span></label>
+                    <input type="date" id="food-expiry" required>
+                    <div class="date-hints">
+                        <button type="button" class="btn-date-hint" data-days="3">3 Days</button>
+                        <button type="button" class="btn-date-hint" data-days="7">1 Week</button>
+                        <button type="button" class="btn-date-hint" data-days="14">2 Weeks</button>
+                        <button type="button" class="btn-date-hint" data-days="30">1 Month</button>
+                    </div>
+                </div>
+                <!-- Photo Upload -->
+                <div class="form-group">
+                    <label>Photo (Optional)</label>
+                    <label for="modal-photo-input" class="photo-upload-zone modal-photo-zone">
+                        <div class="photo-upload-placeholder" id="modal-photo-placeholder">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>Click to upload a photo</span>
+                        </div>
+                        <img id="modal-photo-preview" class="photo-upload-preview" style="display:none;" alt="Preview">
+                        <input type="file" id="modal-photo-input" accept="image/*" style="display:none;">
+                    </label>
+                </div>
+                <footer class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="btn-cancel-modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Item</button>
+                </footer>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal: Admin Reset Link Generator -->
+    <div class="modal" id="modal-admin-reset" style="display:none; z-index:1100;">
+        <div class="modal-overlay" id="admin-reset-overlay"></div>
+        <div class="modal-content" style="max-width: 450px;">
+            <header class="modal-header">
+                <h3>Generate Password Reset Link</h3>
+                <button class="close-btn" id="btn-close-admin-reset"><i class="fa-solid fa-xmark"></i></button>
+            </header>
+            <div style="padding: 1rem 0;">
+                <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--color-text-dim);">
+                    A password reset link has been created for user <strong id="admin-reset-username">username</strong>.
+                </p>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="admin-reset-url-input">Reset Password Link</label>
+                    <input type="text" id="admin-reset-url-input" class="auth-input" style="width: 100%; font-family: monospace; font-size: 0.8rem; background: rgba(255,255,255,0.05); color: var(--color-text); border: 1px solid rgba(255,255,255,0.1); padding: 0.5rem; border-radius: 6px;" readonly>
+                </div>
+                <div style="display: flex; gap: 0.5rem; margin-top: 1.5rem;">
+                    <button class="btn btn-primary" id="btn-admin-reset-copy" style="flex: 1; justify-content: center;">
+                        <i class="fa-solid fa-copy"></i> Copy Link
+                    </button>
+                    <button class="btn btn-secondary" id="btn-admin-reset-email" style="flex: 1; justify-content: center;">
+                        <i class="fa-solid fa-envelope"></i> Email Link
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- =====================================================================
+         AI CHATBOT WIDGET — floating button + slide-up panel
+    ====================================================================== -->
+
+    <!-- Floating Chat Button -->
+    <button class="chatbot-fab" id="btn-chatbot-fab" title="Ask FreshGuard AI" aria-label="Open AI Chat">
+        <i class="fa-solid fa-robot chatbot-fab-icon" id="chatbot-fab-icon"></i>
+        <span class="chatbot-fab-pulse"></span>
+    </button>
+
+    <!-- Chat Panel -->
+    <div class="chatbot-panel" id="chatbot-panel" aria-hidden="true">
+        <div class="chatbot-panel-header">
+            <div class="chatbot-header-info">
+                <div class="chatbot-avatar">
+                    <i class="fa-solid fa-robot"></i>
+                    <span class="chatbot-status-dot"></span>
+                </div>
+                <div>
+                    <h4>FreshGuard AI</h4>
+                    <span class="chatbot-status-text">Always online &bull; Food expert</span>
+                </div>
+            </div>
+            <button class="chatbot-close-btn" id="btn-chatbot-close" title="Close chat">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="chatbot-messages" id="chatbot-messages">
+            <!-- Welcome message injected by JS -->
+        </div>
+
+        <div class="chatbot-input-area">
+            <div class="chatbot-quick-chips" id="chatbot-quick-chips">
+                <button class="chatbot-chip" data-msg="How long does milk last?">🥛 Milk tips</button>
+                <button class="chatbot-chip" data-msg="How do I reduce food waste?">♻️ Reduce waste</button>
+                <button class="chatbot-chip" data-msg="Give me recipe ideas">🍳 Recipes</button>
+                <button class="chatbot-chip" data-msg="How do I reset my password?">🔑 Password help</button>
+            </div>
+            <div class="chatbot-input-row">
+                <input type="text" id="chatbot-input" class="chatbot-input" placeholder="Ask about food, storage, recipes..." maxlength="500" autocomplete="off">
+                <button class="chatbot-send-btn" id="btn-chatbot-send" title="Send message">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         ADMIN REQUEST MODAL — user requests to become admin
+    ====================================================================== -->
+    <div id="admin-request-modal-overlay" class="google-modal-overlay" style="display:none;">
+        <div class="google-modal-card" style="max-width:420px;">
+            <div class="google-modal-header">
+                <i class="fa-solid fa-user-shield" style="color:var(--color-primary); font-size:1.1rem; margin-right:0.5rem;"></i>
+                <span style="font-weight:700;">Request Admin Access</span>
+                <button class="google-modal-close" id="btn-admin-request-modal-close" type="button">&times;</button>
+            </div>
+            <div id="admin-request-step-1">
+                <p class="google-modal-desc">To become an admin, a verification code will be generated for you. Contact the app owner at <strong><a href="tel:0116234767" style="color:var(--color-primary);">0116234767</a></strong> and give them your username — they will verify you using this code.</p>
+                <div id="admin-request-error" class="form-error" style="display:none;"></div>
+                <button class="auth-submit-btn" type="button" id="btn-generate-admin-code">Generate My Verification Code</button>
+            </div>
+            <div id="admin-request-step-2" style="display:none;">
+                <p class="google-modal-desc">Your verification code has been generated. <strong>Contact the owner at <a href="tel:0116234767" style="color:var(--color-primary);">0116234767</a></strong> and share your username and this code:</p>
+                <div class="admin-code-display" id="admin-code-display">------</div>
+                <p class="google-modal-desc" style="margin-top:0.75rem; font-size:0.8rem; color:var(--color-text-dim);">Once the owner verifies you, come back here and click the button below to activate your admin role.</p>
+                <button class="auth-submit-btn" type="button" id="btn-go-verify-code" style="background: linear-gradient(135deg, #059669, #10b981);"><i class="fa-solid fa-key"></i> Enter Verification Code</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         ADMIN VERIFY CODE MODAL — user enters the code given by the owner
+    ====================================================================== -->
+    <div id="admin-verify-modal-overlay" class="google-modal-overlay" style="display:none;">
+        <div class="google-modal-card" style="max-width:420px;">
+            <div class="google-modal-header">
+                <i class="fa-solid fa-key" style="color:#FBBC05; font-size:1.1rem; margin-right:0.5rem;"></i>
+                <span style="font-weight:700;">Enter Verification Code</span>
+                <button class="google-modal-close" id="btn-admin-verify-modal-close" type="button">&times;</button>
+            </div>
+            <p class="google-modal-desc">Enter the 6-digit code that the app owner provided to verify your admin access.</p>
+            <div class="auth-form-group">
+                <label class="auth-label" for="admin-verify-code-input">VERIFICATION CODE</label>
+                <input type="text" id="admin-verify-code-input" class="auth-input" placeholder="e.g. 482910" maxlength="6" autocomplete="one-time-code" style="letter-spacing:0.3em; font-size:1.4rem; text-align:center;">
+            </div>
+            <div id="admin-verify-error" class="form-error" style="display:none;"></div>
+            <button class="auth-submit-btn" type="button" id="btn-submit-admin-verify">Verify & Activate Admin</button>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
